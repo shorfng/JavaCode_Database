@@ -1,13 +1,3 @@
-# 插入数据 - 一条
-# insert into 表名 (字段1, 字段2) values (字段1的值, 字段2的值);
-insert into tb_admin_info (username, pwd) values ('CJ', '123');
-
-# 插入数据 - 多条
-# insert into 表名 (字段1, 字段2) values (字段1的值, 字段2的值), (字段1的值, 字段2的值) ;
-insert into tb_admin_info (username, pwd) values ('CJ', '123'), ('Jan', '123');
-
-# =============================================================================
-
 # 查询数据
 #（1）通用查询
 # 查询表的所有数据
@@ -92,11 +82,4 @@ select 列名, function(列名) from 表名 where 列名 operator value group by
 
 # select 字段1,字段2 from 表名 where 条件1,条件2 order by 字段3,字段4 desc limit n offset m ;
 
-# ====================================================================
 
-
-# 修改数据
-
-# ====================================================================
-
-# 删除数据
