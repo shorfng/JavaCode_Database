@@ -61,7 +61,7 @@ select * from tb_admin_info order by CONVERT(username using gbk) desc ;
 
 
 # 分组
-select 列名, function(列名) from 表名 where 列名 operator value group by 列名;
+# select 列名, function(列名) from 表名 where 列名 operator value group by 列名;
 
 
 # 连接
@@ -81,5 +81,15 @@ select 列名, function(列名) from 表名 where 列名 operator value group by
 #  limit N,M : 相当于 limit M offset N , 从第 N 条记录开始, 返回 M 条记录
 
 # select 字段1,字段2 from 表名 where 条件1,条件2 order by 字段3,字段4 desc limit n offset m ;
+
+
+# ===================================================================================
+
+# 获取最近的 id 值
+#（1）查询和插入所使用的Connection对象必须是同一个才可以，否则返回值是不可预料的
+#（2）LAST_INSERT_ID 是与table无关的，如果向表a插入数据后，再向表b插入数据，LAST_INSERT_ID返回表b中的Id值
+#（3）假如你使用一条INSERT语句插入多个行，  LAST_INSERT_ID() 只返回插入的第一行数据时产生的值
+#（4）假如你使用 INSERT IGNORE而记录被忽略，则AUTO_INCREMENT 计数器不会增量，而 LAST_INSERT_ID() 返回0, 这反映出没有插入任何记录。
+select last_insert_id();
 
 
