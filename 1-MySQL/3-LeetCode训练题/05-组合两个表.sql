@@ -11,7 +11,7 @@
 # PersonId 是上表主键
 
 -- auto-generated definition
-create table test05_Person
+create table test05_person
 (
     PersonId  int         not null
         primary key,
@@ -31,7 +31,7 @@ create table test05_Person
 # AddressId 是上表主键
 
 -- auto-generated definition
-create table test05_Address
+create table test05_address
 (
     AddressId int         not null
         primary key,
@@ -43,6 +43,7 @@ create table test05_Address
 # 编写一个 SQL 查询，满足条件：无论 person 是否有地址信息，都需要基于上述两表提供 person 的以下信息：
 # FirstName, LastName, City, State
 
+# 答案
 select firstname,
        lastname,
        city,
