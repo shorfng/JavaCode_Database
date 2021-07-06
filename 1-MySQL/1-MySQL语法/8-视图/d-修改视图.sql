@@ -1,0 +1,1 @@
+# alter view <视图名> as <select语句>;
