@@ -1,18 +1,23 @@
 package com.loto.dao;
 
 import com.loto.RunBoot;
+import com.loto.entity.BOrder;
 import com.loto.entity.City;
 import com.loto.entity.Position;
 import com.loto.entity.PositionDetail;
+import com.loto.repository.BOrderRepository;
 import com.loto.repository.CityRepository;
 import com.loto.repository.PositionDetailRepository;
 import com.loto.repository.PositionRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.Repeat;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
+import java.util.Date;
+import java.util.Random;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = RunBoot.class)
@@ -25,6 +30,9 @@ public class a_ShardingJDBC {
 
     @Resource
     private CityRepository cityRepository;
+
+    @Resource
+    private BOrderRepository orderRepository;
 
     /**
      * 向 Position 表添加数据
@@ -83,5 +91,33 @@ public class a_ShardingJDBC {
         city.setProvince("beijing");
 
         cityRepository.save(city);
+    }
+
+    /**
+     * 分库分表
+     */
+    @Test
+    @Repeat(100)
+    public void testShardingBOrder() {
+        BOrder order = new BOrder();
+
+        Random random = new Random();
+        int companyId = random.nextInt(10);
+        order.setCompanyId(companyId);
+
+        order.setDel(false);
+        order.setPositionId(3242342);
+        order.setUserId(2222);
+        order.setPublishUserId(1111);
+        order.setResumeType(1);
+        order.setStatus("AUTO");
+        order.setCreateTime(new Date());
+        order.setOperateTime(new Date());
+        order.setWorkYear("2");
+        order.setName("TD");
+        order.setPositionName("Java");
+        order.setResumeId(23233);
+
+        orderRepository.save(order);
     }
 }
