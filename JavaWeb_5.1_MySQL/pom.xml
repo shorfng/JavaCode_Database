@@ -15,7 +15,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>mysql-sharding-jdbc</module>
+        <module>mysql-sharding-jdbc1</module>
     </modules>
 
     <!-- 解决Language Level版本问题 -->
