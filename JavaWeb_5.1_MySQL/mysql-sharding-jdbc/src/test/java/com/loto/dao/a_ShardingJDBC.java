@@ -1,8 +1,10 @@
 package com.loto.dao;
 
 import com.loto.RunBoot;
+import com.loto.entity.City;
 import com.loto.entity.Position;
 import com.loto.entity.PositionDetail;
+import com.loto.repository.CityRepository;
 import com.loto.repository.PositionDetailRepository;
 import com.loto.repository.PositionRepository;
 import org.junit.Test;
@@ -14,12 +16,15 @@ import javax.annotation.Resource;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = RunBoot.class)
-public class TestShardingDatabase {
+public class a_ShardingJDBC {
     @Resource
     private PositionRepository positionRepository;
 
     @Resource
     private PositionDetailRepository positionDetailRepository;
+
+    @Resource
+    private CityRepository cityRepository;
 
     /**
      * 向 Position 表添加数据
@@ -66,5 +71,17 @@ public class TestShardingDatabase {
         Object[] position = (Object[]) object;
         System.out.println("===========================================");
         System.out.println(position[0] + " " + position[1] + " " + position[2] + " " + position[3] + " " + position[4]);
+    }
+
+    /**
+     * 广播表
+     */
+    @Test
+    public void testBroadCast() {
+        City city = new City();
+        city.setName("beijing");
+        city.setProvince("beijing");
+
+        cityRepository.save(city);
     }
 }
