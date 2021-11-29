@@ -18,6 +18,7 @@
         <module>mysql-sharding-jdbc1</module>
         <module>mysql-sharding-jdbc2-separate-rw</module>
         <module>mysql-sharding-jdbc3-hint</module>
+        <module>mysql-sharding-jdbc4-desensitization</module>
     </modules>
 
     <!-- 解决Language Level版本问题 -->
