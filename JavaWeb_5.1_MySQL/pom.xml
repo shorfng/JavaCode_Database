@@ -20,6 +20,7 @@
         <module>mysql-sharding-jdbc3-hint</module>
         <module>mysql-sharding-jdbc4-desensitization</module>
         <module>mysql-sharding-jdbc5-transaction</module>
+        <module>mysql-sharding-proxy</module>
     </modules>
 
     <!-- 解决Language Level版本问题 -->
