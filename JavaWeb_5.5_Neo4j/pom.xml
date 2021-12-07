@@ -17,6 +17,7 @@
     <modules>
         <module>neo4j-java-embedded</module>
         <module>neo4j-java-server</module>
+        <module>neo4j-springboot</module>
     </modules>
 
     <!-- 解决Language Level版本问题 -->
