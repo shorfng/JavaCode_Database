@@ -12,6 +12,13 @@
     <!-- 本工程项目信息 -->
     <modelVersion>4.0.0</modelVersion>
     <artifactId>JavaWeb_5.2_Redis</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>redis1-java</module>
+        <module>redis2-spring</module>
+        <module>redis3-springboot</module>
+    </modules>
 
     <!-- 解决Language Level版本问题 -->
     <properties>
