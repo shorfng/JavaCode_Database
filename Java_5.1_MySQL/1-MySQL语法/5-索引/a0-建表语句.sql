@@ -35,7 +35,7 @@ create table tb_admin_info
 create index sex
     on tb_admin_info (sex);
 
-INSERT INTO `javaweb_5.1_mysql`.tb_admin_info (id, username, pwd, sex, create_user, create_time, update_user, update_time, effective) VALUES (1, 'a', '1', 1, null, null, null, '2021-11-24 11:42:23', null);
-INSERT INTO `javaweb_5.1_mysql`.tb_admin_info (id, username, pwd, sex, create_user, create_time, update_user, update_time, effective) VALUES (2, 'b', '2', 2, null, null, null, '2021-11-24 11:42:30', null);
-INSERT INTO `javaweb_5.1_mysql`.tb_admin_info (id, username, pwd, sex, create_user, create_time, update_user, update_time, effective) VALUES (3, 'c', '3', 2, null, null, null, '2021-11-24 12:02:58', null);
+INSERT INTO `JavaCode_Database`.tb_admin_info (id, username, pwd, sex, create_user, create_time, update_user, update_time, effective) VALUES (1, 'a', '1', 1, null, null, null, '2021-11-24 11:42:23', null);
+INSERT INTO `JavaCode_Database`.tb_admin_info (id, username, pwd, sex, create_user, create_time, update_user, update_time, effective) VALUES (2, 'b', '2', 2, null, null, null, '2021-11-24 11:42:30', null);
+INSERT INTO `JavaCode_Database`.tb_admin_info (id, username, pwd, sex, create_user, create_time, update_user, update_time, effective) VALUES (3, 'c', '3', 2, null, null, null, '2021-11-24 12:02:58', null);
 

@@ -3,13 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>JavaWeb_5.1_MySQL</artifactId>
+        <artifactId>Java_5.1_MySQL</artifactId>
         <groupId>com.loto</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>mysql-sharding-jdbc2-separate-rw</artifactId>
+
+    <artifactId>mysql-sharding-jdbc4-desensitization</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
