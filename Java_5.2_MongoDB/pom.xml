@@ -11,7 +11,7 @@
 
     <!-- 本工程项目信息 -->
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>JavaWeb_5.4_MongoDB</artifactId>
+    <artifactId>Java_5.2_MongoDB</artifactId>
     <packaging>pom</packaging>
 
     <modules>
