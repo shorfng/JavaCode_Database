@@ -1,0 +1,2 @@
+alter table tb_admin_info_partition_list add partition (partition P00000000003 values in('未知'));
+alter table tb_admin_info_partition_range add partition (partition P20230103 values less than ('20230104'));
