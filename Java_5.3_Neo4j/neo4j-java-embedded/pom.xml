@@ -2,25 +2,25 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <!-- 父工程信息 -->
-    <modelVersion>4.0.0</modelVersion>
-    <groupId>com.loto</groupId>
-    <artifactId>JavaCode_Database</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <parent>
+        <artifactId>Java_5.3_Neo4j</artifactId>
+        <groupId>com.loto</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
 
-    <!-- 解决Language Level版本问题 -->
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>neo4j-java-embedded</artifactId>
+
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
-    <!-- 子工程信息 -->
-    <modules>
-        <module>Java_5.1_MySQL</module>
-        <module>Java_5.2_MongoDB</module>
-        <module>Java_5.3_Neo4j</module>
-        <module>Java_5.4_Oracle</module>
-    </modules>
-
+    <dependencies>
+        <dependency>
+            <groupId>org.neo4j</groupId>
+            <artifactId>neo4j</artifactId>
+            <version>3.5.5</version>
+        </dependency>
+    </dependencies>
 </project>

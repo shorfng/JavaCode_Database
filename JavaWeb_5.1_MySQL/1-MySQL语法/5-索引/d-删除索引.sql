@@ -1,1 +1,0 @@
-# alter table 表名 drop index 索引名;
