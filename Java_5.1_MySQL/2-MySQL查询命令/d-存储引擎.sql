@@ -161,7 +161,7 @@ show binlog events in 'mysqlbinlog.000001';
 # mysqlbinlog "文件名"
 
 # 输出到文件中查看
-# mysqlbinlog "文件名" > "test.sql"
+# mysqlbinlog "文件名" > "函数.sql"
 
 
 
